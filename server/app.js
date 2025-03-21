@@ -57,6 +57,8 @@ const io = new Server(httpServer, {
   }
 });
 
+app.get('/',(req,res)=>{res.send("welcome")})
+
 // Socket.io middleware for authentication
 io.use(async (socket, next) => {
   try {
